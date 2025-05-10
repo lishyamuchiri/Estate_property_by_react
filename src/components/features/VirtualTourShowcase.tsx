@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Property } from '../../types/property.types';
 import { Button } from '../ui/Button';
-import { Eye3d, Maximize, Volume2, VolumeX, Ruler, PanelRight, MessageCircle } from 'lucide-react';
+import { Eye, Maximize, Volume2, VolumeX, Ruler, PanelRight, MessageCircle } from 'lucide-react';
 
 interface VirtualTourShowcaseProps {
   properties: Property[];
@@ -125,7 +125,7 @@ const VirtualTourShowcase: React.FC<VirtualTourShowcaseProps> = ({ properties })
                       <Button 
                         variant={activeTool === '3d' ? 'primary' : 'ghost'} 
                         size="sm"
-                        icon={<Eye3d size={16} />}
+                        icon={<Eye size={16} />}
                         onClick={() => setActiveTool(activeTool === '3d' ? null : '3d')}
                         className={activeTool !== '3d' ? "text-white hover:bg-white/20" : ""}
                       >
